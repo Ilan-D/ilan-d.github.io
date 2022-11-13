@@ -1,0 +1,33 @@
+p.Welcolme{
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+}
+
+p.Lorem{
+    color:rgb(0, 0, 0)
+} 
+
+body{
+    background-color: wheat;
+}
+
+h2.intitule{
+    color: rgb(53, 34, 34);
+    background-color:darkgoldenrod;
+    text-align: center;
+}
+
+a{
+    color:rgb(0, 0, 0);
+}
+
+img{
+    margin: auto;
+    display: block;
+    border-radius: 20%;
+    border-left: 10px;
+    border-bottom-left-radius: 25%;
+    border-top-right-radius: 25%;
+    border-spacing: 25%;
+    border: 4mm ridge darkgoldenrod;
+}
