@@ -1,4 +1,4 @@
-O/*old style*/
+/*old style*/
 /*p.Welcolme{
     color: rgb(0, 0, 0);
     font-size: 40px;
@@ -46,9 +46,9 @@ nav.menu-nav ul li.btn:hover a{
     transition: 0.3s all;
 }*/
 
+
 p.Welcolme{
     color: white;
-    font-size: 40px;
 }
 
 p.Lorem{
