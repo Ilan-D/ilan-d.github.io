@@ -1,33 +1,33 @@
-p.Welcolme{
-    color: rgb(0, 0, 0);
-    font-size: 40px;
-}
-
-p.Lorem{
-    color:rgb(0, 0, 0)
-} 
-
-body{
-    background-color: wheat;
-}
-
-h2.intitule{
-    color: rgb(53, 34, 34);
-    background-color:darkgoldenrod;
+body {
     text-align: center;
+    /* background-color: #212F3D; */
+    font-family: "SoDo Sans SemiBold", Helvetica Neue, Helvetica, Arial, sans-serif;
+    /* background-image: url(kai-pilger-Ef6iL87-vOA-unsplash.jpg);
+    background-position: center; */
+
 }
 
-a{
-    color:rgb(0, 0, 0);
+header div.first {
+    background: linear-gradient(#34495E, #212F3D);
+    color: whitesmoke;
+    background-repeat: no-repeat;
+    height: 105px;
 }
 
-img{
-    margin: auto;
-    display: block;
-    border-radius: 20%;
-    border-left: 10px;
-    border-bottom-left-radius: 25%;
-    border-top-right-radius: 25%;
-    border-spacing: 25%;
-    border: 4mm ridge darkgoldenrod;
+nav.menu ul li.btn {
+    display: inline-block;
 }
+
+
+nav.menu ul li.btn a {
+    /* text-decoration: none; */
+    color: whitesmoke;
+    padding: 10px;
+    font-size: 30px;
+}
+
+/* nav.menu ul li.btn:hover a {
+    color: #4D5656;
+    background-color: #17202A;
+    transition: 0.2s;
+} */
