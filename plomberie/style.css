@@ -28,7 +28,7 @@ header li a {
     color: aliceblue;
 }
 
-#texte {
+.texte {
     display: flex;
     list-style: none;
     justify-content: space-around;
@@ -91,8 +91,6 @@ main {
     margin-left: 2%;
 }
 
-
-
 img.menu-btn {
     display: none;
 }
@@ -117,7 +115,7 @@ img.menu-btn {
         background-color: rgba(215, 207, 207, 0.323);
         width: 100%;
         height: 100vh;
-        display: flex;
+        /* display: flex; */
         justify-content: center;
         align-items: center;
         margin-left: -100%;
@@ -151,9 +149,23 @@ img.menu-btn {
         left: 50px;
     }
 
-    #texte {
+    main {
+        position: relative;
+        bottom: 800px;
+        /* left: 20%; */
+    }
+
+    main div.texte {
+        /* position: absolute; */
+        /* Position absolue par rapport à son conteneur parent, main */
+        /* top: 0; */
+
+    }
+
+    .texte.hidden {
         display: none;
     }
+
 }
 
 footer {

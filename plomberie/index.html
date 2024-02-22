@@ -24,8 +24,9 @@
             </div>
         </nav>
     </header>
-    <!-- <p>BIENVENU SUR DALORE PLOMBERIE !</p> -->
-    <div id="texte"></div>
+    <main>
+        <div class="texte"></div>
+    </main>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -34,7 +35,10 @@
             var vitesse = 60; // Vitesse d'écriture (en millisecondes)
 
             function ecrire() {
-                document.getElementById("texte").textContent += texte[index];
+                // Utilisation de querySelector pour cibler par classe
+                var texteDiv = document.querySelector(".texte");
+                // Ajout du contenu au texteDiv
+                texteDiv.textContent += texte[index];
                 index++;
                 if (index < texte.length) {
                     setTimeout(ecrire, vitesse);
@@ -51,9 +55,11 @@
     <script>
         const menuHamburger = document.querySelector(".menu-btn");
         const navLinks = document.querySelector(".div-links");
+        const texteDiv = document.querySelector(".texte");
 
         menuHamburger.addEventListener('click', () => {
             navLinks.classList.toggle('mobile-menu')
+            texteDiv.classList.toggle('hidden');
         });
     </script>
 </body>
