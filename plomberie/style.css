@@ -150,16 +150,9 @@ img.menu-btn {
     }
 
     main {
-        position: relative;
-        bottom: 800px;
-        /* left: 20%; */
-    }
-
-    main div.texte {
-        /* position: absolute; */
-        /* Position absolue par rapport à son conteneur parent, main */
-        /* top: 0; */
-
+        position: absolute;
+        bottom: 70%;
+        left: 20%;
     }
 
     .texte.hidden {
