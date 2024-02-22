@@ -1,0 +1,90 @@
+body {
+    background-color: black;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: aliceblue;
+}
+
+footer {
+    text-align: center;
+}
+
+header li {
+    list-style-type: none;
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+header li a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#texte {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    /* width: 100%; */
+    margin: auto;
+    height: 20vh;
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+#a2 {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+#a1 {
+    text-decoration: none;
+    /* color: aliceblue;
+     */
+    /* ceci va dessiner un background puis on va l'appliquer uniquement au text avec background clip et la couleur doit etre transparent*/
+    background: linear-gradient(to right, #92500D, rgb(70, 52, 4));
+    background-clip: text;
+    color: transparent;
+    font-size: 60px;
+    margin-left: 2%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    height: 20vh;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+header {
+    /* background-color: lightgray; */
+}
+
+header nav {
+    /* size: 1000%; */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-right: 30%;
+}
+
+nav li {
+    margin-left: 100px;
+    /* Espacement entre chaque élément <li> */
+}

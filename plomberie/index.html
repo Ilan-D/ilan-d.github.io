@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dalor Plomberie</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a id="a1" href="index.html">DALOR</a>
+            <nav>
+                <ul>
+                    <li class="presentations"><a href="">PRESENTATION</a></li>
+                    <li class="tarifs"><a href="">TARIFS</a></li>
+                    <li class="prestations"><a href="">PRESTATIONS</a></li>
+                    <li class="quizz"><a href="">QUIZZ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- <a id="a1" href="index.html">DALOR</a>
+        <nav>
+            <li class="presentations">
+                <a href="">PRESENTATION</a>
+            </li>
+            <li class="tarifs">
+                <a href="">TARIFS</a>
+            </li>
+            <li class="prestations">
+                <a href="">PRESTATIONS</a>
+            </li>
+            <li class="quizz">
+                <a href="">QUIZZ</a>
+            </li>
+        </nav> -->
+    </header>
+    <!-- <p>BIENVENU SUR DALORE PLOMBERIE !</p> -->
+    <div id="texte"></div>
+    <p>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var texte = "BIENVENU SUR DALOR PLOMBERIE !";
+                var index = 0;
+                var vitesse = 60; // Vitesse d'écriture (en millisecondes)
+
+                function ecrire() {
+                    document.getElementById("texte").textContent += texte[index];
+                    index++;
+                    if (index < texte.length) {
+                        setTimeout(ecrire, vitesse);
+                    }
+                }
+                ecrire();
+            });
+        </script>
+    </p>
+
+    </head>
+
+
+
+    <footer>
+        © Copyright 2024 <a id="a2" href="index.html">Dalor Plomberie</a> - Tout droits réservés
+    </footer>
+</body>
+
+</html>
