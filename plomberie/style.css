@@ -150,7 +150,7 @@ img.menu-btn {
     }
 
     /* sous reserve arranger ceci */
-    /* main {
+    main {
         position: absolute;
         bottom: 70%;
         left: 20%;
@@ -158,11 +158,11 @@ img.menu-btn {
 
     .texte.hidden {
         display: none;
-    } */
-
-    .texte {
-        display: none;
     }
+
+    /* .texte {
+        display: none;
+    } */
 
 }
 
