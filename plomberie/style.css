@@ -149,13 +149,18 @@ img.menu-btn {
         left: 50px;
     }
 
-    main {
+    /* sous reserve arranger ceci */
+    /* main {
         position: absolute;
         bottom: 70%;
         left: 20%;
     }
 
     .texte.hidden {
+        display: none;
+    } */
+
+    .texte {
         display: none;
     }
 
