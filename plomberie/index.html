@@ -10,10 +10,10 @@
 
 <body>
     <header>
-        <div class="container">
-            <a id="a1" href="index.html">DALOR</a>
-            <a href=""><img src="menu-btn.png" class="menu-btn"></a>
-            <nav class="nav-links">
+        <nav class="navbar">
+            <a id="logo" href="index.html">DALOR</a>
+            <img src="menu-btn.png" class="menu-btn">
+            <div class="div-links">
                 <ul>
                     <li class="presentations"><a href="">PRESENTATION</a></li>
                     <li class="tarifs"><a href="">TARIFS</a></li>
@@ -21,8 +21,8 @@
                     <li class="quizz"><a href="">QUIZZ</a></li>
                     <li class="quizz"><a href="">RESEAUX</a></li>
                 </ul>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
     <!-- <p>BIENVENU SUR DALORE PLOMBERIE !</p> -->
     <div id="texte"></div>
@@ -44,13 +44,18 @@
         });
     </script>
 
-    </head>
-
-
-
     <footer>
         © Copyright 2024 <a id="a2" href="index.html">Dalor Plomberie</a> - Tout droits réservés
     </footer>
+
+    <script>
+        const menuHamburger = document.querySelector(".menu-btn");
+        const navLinks = document.querySelector(".div-links");
+
+        menuHamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-menu')
+        });
+    </script>
 </body>
 
 </html>

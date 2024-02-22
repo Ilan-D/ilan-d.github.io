@@ -4,9 +4,10 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, sans-serif;
     -webkit-font-smoothing: antialiased;
     color: aliceblue;
+    text-align: center;
 }
 
-.container {
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +41,7 @@ header li a {
     font-weight: 500;
 }
 
-nav {
+.div-links {
     display: flex;
     list-style: none;
     justify-content: space-around;
@@ -53,14 +54,14 @@ nav {
 }
 
 
-nav ul {
+.div-links ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin-right: 30%;
 }
 
-nav li {
+.div-links li {
     margin-left: 100px;
     /* Espacement entre chaque élément <li> */
 }
@@ -74,7 +75,11 @@ nav li {
     font-size: 130%;
 }
 
-#a1 {
+main {
+    flex: 1;
+}
+
+#logo {
     text-decoration: none;
     /* color: aliceblue;
      */
@@ -86,13 +91,44 @@ nav li {
     margin-left: 2%;
 }
 
+
+
 img.menu-btn {
     display: none;
 }
 
 @media screen and (max-width: 1250px) {
-    nav.nav-links {
-        display: none;
+    .navbar {
+        padding: 0;
+        position: relative;
+    }
+
+    .div-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    body {
+        backdrop-filter: blur(5px);
+    }
+
+    .div-links {
+        top: 0;
+        right: 0;
+        /* position: absolute; */
+        background-color: rgba(215, 207, 207, 0.323);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .div-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     img.menu-btn {
@@ -102,4 +138,28 @@ img.menu-btn {
         right: 50px;
         width: 35px;
     }
+
+    .div-links ul li {
+        margin: 25px 0;
+        font-size: 2em;
+    }
+
+    #logo {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+
+    #texte {
+        display: none;
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
 }
