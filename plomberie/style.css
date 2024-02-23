@@ -13,10 +13,6 @@ body {
     align-items: center;
 }
 
-footer {
-    text-align: center;
-}
-
 header li {
     list-style-type: none;
     display: list-item;
@@ -28,17 +24,22 @@ header li a {
     color: aliceblue;
 }
 
-.texte {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    align-items: center;
-    /* width: 100%; */
-    margin: auto;
-    height: 20vh;
-    font-size: 35px;
-    letter-spacing: 3px;
-    font-weight: 500;
+header li a:hover {
+    color: #92500D;
+}
+
+#logo {
+    text-decoration: none;
+    /* ceci va dessiner un background puis on va l'appliquer uniquement au text avec background clip et la couleur doit etre transparent*/
+    background: linear-gradient(to right, #92500D, rgb(70, 52, 4));
+    background-clip: text;
+    color: transparent;
+    font-size: 60px;
+    margin-left: 2%;
+}
+
+img.menu-btn {
+    display: none;
 }
 
 .div-links {
@@ -66,29 +67,28 @@ header li a {
     /* Espacement entre chaque élément <li> */
 }
 
-#a2 {
-    text-decoration: none;
-    color: #92500D;
-    font-size: 130%;
+
+.texte {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    /* width: 100%; */
+    margin: auto;
+    height: 20vh;
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-weight: 500;
 }
+
 
 main {
     flex: 1;
 }
 
-#logo {
-    text-decoration: none;
-    /* ceci va dessiner un background puis on va l'appliquer uniquement au text avec background clip et la couleur doit etre transparent*/
-    background: linear-gradient(to right, #92500D, rgb(70, 52, 4));
-    background-clip: text;
-    color: transparent;
-    font-size: 60px;
-    margin-left: 2%;
-}
 
-img.menu-btn {
-    display: none;
-}
+
+
 
 @media screen and (max-width: 1250px) {
     .navbar {
@@ -168,4 +168,11 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+/* footer */
+#a2 {
+    text-decoration: none;
+    color: #92500D;
+    font-size: 130%;
 }
