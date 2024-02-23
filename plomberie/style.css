@@ -68,9 +68,6 @@ header li a {
 
 #a2 {
     text-decoration: none;
-    /* background: linear-gradient(to right, #92500D, rgb(174, 129, 7));
-    background-clip: text;
-    color: transparent; */
     color: #92500D;
     font-size: 130%;
 }
@@ -81,8 +78,6 @@ main {
 
 #logo {
     text-decoration: none;
-    /* color: aliceblue;
-     */
     /* ceci va dessiner un background puis on va l'appliquer uniquement au text avec background clip et la couleur doit etre transparent*/
     background: linear-gradient(to right, #92500D, rgb(70, 52, 4));
     background-clip: text;
