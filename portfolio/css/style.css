@@ -10,13 +10,10 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
+    /* Logo à gauche, le reste à droite */
     align-items: center;
-}
-
-header li {
-    list-style-type: none;
-    display: list-item;
-    text-align: -webkit-match-parent;
+    padding: 0;
+    /* Espacement latéral */
 }
 
 header li a {
@@ -28,6 +25,19 @@ header li a:hover {
     color: #92500D;
 }
 
+ul li {
+    position: relative;
+    /* ✅ Définit un point de référence pour le positionnement absolu */
+    height: 60px;
+    /* (Optionnel) Pour éviter un effondrement de la hauteur */
+    /* Déplace le lien de 50px vers le bas */
+    top: 10px;
+}
+
+ul li a {
+    font-size: 35px;
+}
+
 #logo {
     text-decoration: none;
     /* ceci va dessiner un background puis on va l'appliquer uniquement au text avec background clip et la couleur doit etre transparent*/
@@ -35,7 +45,7 @@ header li a:hover {
     background-clip: text;
     color: transparent;
     font-size: 60px;
-    margin-left: 2%;
+    margin-left: 1%;
 }
 
 img.menu-btn {
@@ -43,30 +53,33 @@ img.menu-btn {
 }
 
 .div-links {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    align-items: center;
-    width: 60%;
-    margin: auto;
-    height: 20vh;
-    letter-spacing: 3px;
-    font-weight: 500;
+    /* Décroche du flux normal */
+    position: absolute;
+    /* Positionne au milieu */
+    left: 50%;
+    /* Centre précisément */
+    transform: translateX(-50%);
 }
 
+.div-links {
+    max-width: 100vw;
+    overflow-x: clip;
+}
 
 .div-links ul {
     display: flex;
+    gap: 60px;
+    /* Espacement entre liens */
     list-style: none;
     padding: 0;
-    margin-right: 30%;
+    margin: 0;
+    /* Pas besoin de margin-right */
 }
 
 .div-links li {
-    margin-left: 100px;
     /* Espacement entre chaque élément <li> */
+    margin-left: 0;
 }
-
 
 .texte {
     display: flex;
@@ -81,27 +94,18 @@ img.menu-btn {
     font-weight: 500;
 }
 
-
-main {
-    flex: 1;
-}
-
-
-
-
-
-@media screen and (max-width: 1250px) {
-    .navbar {
+@media screen and (max-width: 800px) {
+    /* .navbar {
         padding: 0;
         position: relative;
-    }
+    } */
 
     .div-links.mobile-menu {
         margin-left: 0;
     }
 
     body {
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(15px);
     }
 
     .div-links {
@@ -110,7 +114,6 @@ main {
         background-color: rgba(215, 207, 207, 0.323);
         width: 100%;
         height: 100vh;
-        /* display: flex; */
         justify-content: center;
         align-items: center;
         margin-left: -100%;
@@ -140,24 +143,13 @@ main {
 
     #logo {
         position: absolute;
-        top: 25px;
-        left: 50px;
+        top: 10px;
     }
-
-    /* sous reserve arranger ceci */
-    /* main {
-        position: absolute;
-        bottom: 70%;
-        left: 20%;
-    }
-
-    .texte.hidden {
-        display: none;
-    } */
 
     .texte {
         display: none;
     }
+
 
 }
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <title>Dahmane Ilan</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+
+
+            <a id="logo" href="projet.html">DALOR</a>
+
+
+            <div class="div-links">
+                <ul>
+                    <li class="presentations"><a href="#">PROJET</a></li>
+                    <li class="tarifs"><a href="#">CV</a></li>
+                    <li class="prestations"><a href="#">COMPETENCE</a></li>
+                </ul>
+            </div>
+
+            <button class="menu-btn" aria-label="Ouvrir le menu">
+                <img src="assets/menu-btn.png">
+            </button>
+
+        </nav>
+    </header>
+
+    <!-- Prend l'espace disponible, pousse le footer vers le bas -->
+    <main>
+
+        <div class="project-selector">
+            <!-- <div class="arrow left-arrow" onclick="slideProjects(-1)">←</div> -->
+
+            <div class="project-container">
+                <img src="assets/snake-jeu.png" class="side-project" id="left-project">
+                <img src="assets/project-center.jpg" class="main-project" id="center-project">
+                <img src="assets/project-right.jpg" class="side-project" id="right-project">
+            </div>
+
+            <!-- <div class="arrow right-arrow" onclick="slideProjects(1)">→</div> -->
+        </div>
+
+        <div class="project-info" id="project-info">
+            <h2>Titre du Projet</h2>
+            <p>Description du projet actuellement sélectionné.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        © Copyright 2025 <a id="a2" href="index.html">Portfolio</a> - Tout droits réservés
+    </footer>
+
+    <script src="texte.js" defer></script>
+
+</body>
+
+</html>

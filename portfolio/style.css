@@ -1,0 +1,213 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, roboto, oxygen, ubuntu, cantarell, fira sans, droid sans, helvetica neue, sans-serif;
+    margin: 0;
+    /* certains navigateur peuvent mettre du margin par défaut */
+    min-height: 100vh;
+    /* Prend toute la hauteur de l'écran */
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-btn {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .menu-btn {
+        display: block;
+        /* on réaffiche le bouton */
+        cursor: pointer;
+        /* changer le curseur en main pour simuler un lien */
+    }
+
+    header div {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.div-links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#logo {
+    text-decoration: none;
+    color: brown;
+}
+
+.div-links ul {
+    display: flex;
+    list-style: none;
+    gap: 8rem;
+}
+
+.div-links ul li a {
+    text-decoration: none;
+    color: brown;
+}
+
+main {
+    flex: 1;
+}
+
+#a2 {
+    text-decoration: none;
+    color: brown;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+}
+
+
+
+/* Style pour le sélecteur de projets */
+.project-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6rem auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+.project-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    gap: 10rem;
+}
+
+.main-project {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    z-index: 2;
+    position: absolute;
+    width: 40%;
+    /* Réduire la taille centrale si nécessaire */
+    margin: 0 2rem;
+    /* Espacement supplémentaire */
+}
+
+.side-project {
+    width: 40%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    position: absolute;
+    width: 25%;
+    /* Espacement latéral */
+    margin: 0 1rem;
+}
+
+.side-project:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+#left-project {
+    left: 0;
+    z-index: 1;
+}
+
+#right-project {
+    right: 0;
+    z-index: 1;
+}
+
+
+.project-info {
+    text-align: center;
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 1rem;
+}
+
+/* Animation pour le glissement */
+.slide-left {
+    animation: slideLeft 0.5s forwards;
+}
+
+.slide-right {
+    animation: slideRight 0.5s forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+body {
+    /* Gardez vos propriétés existantes */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 0.5s ease;
+}
+
+/* Pour améliorer la lisibilité du texte sur les fonds */
+.project-info {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 10px;
+}
+
+.navbar,
+footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
