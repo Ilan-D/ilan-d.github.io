@@ -12,16 +12,95 @@ body {
     display: none;
 }
 
+/* navbar */
 @media screen and (max-width: 800px) {
     .menu-btn {
         display: block;
-        /* on réaffiche le bouton */
+        /* Rend le bouton visible */
+        margin-left: auto;
+        /* Le pousse à droite */
+        background: transparent;
+        /* Fond invisible */
+        border: none;
+        /* Supprime la bordure par défaut */
+        padding: 5px;
+        /* Espace autour de l'icône */
         cursor: pointer;
-        /* changer le curseur en main pour simuler un lien */
     }
 
-    header div {
-        display: none;
+    .div-links {
+        position: fixed;
+        /* Fixe par rapport à la fenêtre */
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        /* Prend toute la hauteur d'écran */
+        background-color: rgba(215, 207, 207, 0.323);
+        /* Fond semi-transparent */
+        margin-left: -100%;
+        /* Cache le menu à gauche (hors écran) */
+        transition: all 0.5s ease;
+        /* Animation fluide */
+    }
+
+    /* C'est ce que js active lors du clique sur la navbar */
+    .div-links.mobile-menu {
+        margin-left: 0;
+        /* Fait glisser le menu vers la droite */
+    }
+
+    .div-links ul {
+        display: flex;
+        flex-direction: column;
+        /* Empile les liens verticalement */
+        justify-content: center;
+        /* Centre verticalement */
+        align-items: center;
+        /* Centre horizontalement */
+    }
+
+    /* revoir ?? */
+    .div-links ul li {
+        font-size: 0px;
+        /* Taille du texte augmentée */
+    }
+
+    .navbar {
+        padding: 0;
+        position: relative;
+    }
+
+    .menu-btn img {
+        /* Ajustez la taille de l'icône */
+        width: 24px;
+        height: 24px;
+        /* Optionnel : ajoutez un effet au survol */
+        transition: opacity 0.3s ease;
+    }
+
+    .menu-btn:hover img {
+        /* Léger effet de survol */
+        opacity: 0.8;
+    }
+
+    img.menu-btn {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        width: 35px;
+    }
+
+    /* Effet de flou */
+    .main-blur {
+        filter: blur(5px);
+        transition: filter 0.7s ease;
+    }
+
+    /* Style du menu mobile */
+    .div-links.mobile-menu {
+        display: block;
     }
 
     footer {
@@ -45,6 +124,7 @@ body {
 #logo {
     text-decoration: none;
     color: brown;
+    font-size: 30px;
 }
 
 .div-links ul {
@@ -56,6 +136,11 @@ body {
 .div-links ul li a {
     text-decoration: none;
     color: brown;
+    font-size: 30px;
+}
+
+.div-links ul li a:hover {
+    color: antiquewhite;
 }
 
 main {
@@ -65,6 +150,10 @@ main {
 #a2 {
     text-decoration: none;
     color: brown;
+}
+
+#a2:hover {
+    color: antiquewhite;
 }
 
 footer {
@@ -163,7 +252,7 @@ footer {
     }
 
     to {
-        transform: translateX(-100%);
+        transform: translateX(-60%);
         opacity: 0;
     }
 }
@@ -175,23 +264,24 @@ footer {
     }
 
     to {
-        transform: translateX(100%);
+        transform: translateX(60%);
         opacity: 0;
     }
 }
 
 body {
     /* Gardez vos propriétés existantes */
-    background-size: cover;
+    /* background-size: cover; */
     background-position: center;
     background-repeat: no-repeat;
     transition: background-image 0.5s ease;
+    /* quand on mets à jour le background */
 }
 
 /* Pour améliorer la lisibilité du texte sur les fonds */
 .project-info {
     background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: antiquewhite;
     border-radius: 10px;
 }
 
@@ -199,15 +289,25 @@ body {
 footer {
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(5px);
+    color: antiquewhite;
 }
 
+/* pour assombrir l'image d'arrière plan afin de voir mieux, c'est une sorte de calque qui couvre toute la page en arrière plan juste derrière le contenu principal et au dessus du background principal */
 body::before {
     content: "";
     position: fixed;
+    /* on étire le calque sur toutes la fenêtre */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.3);
     z-index: -1;
+}
+
+html,
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
